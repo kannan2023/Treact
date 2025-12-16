@@ -422,16 +422,25 @@ z-index: 2;
   color: #cbd5e0;
   line-height: 1;          /* keeps number aligned at top */
 }
-.valuesparent {
-  display: flex;           
-  align-items: flex-start; 
-  gap: 16px;              
-  /* border: 1px solid #ccc; */
-  height: 40px ;
-}
+
 
 
 /* Values */
+
+.valuesparent {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+.valuesparent {
+  /* display: flex;           
+  align-items: flex-start; 
+  gap: 16px;              
+  /* border: 1px solid #ccc; */
+  height: 40px ; */
+}
 
 .leftdivvalues {
   width: 50%;
@@ -517,13 +526,7 @@ z-index: 2;
 }
 
 
-.valuesparent {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  flex-wrap: wrap;
-  margin-top: 32px;
-}
+
 .valuesrow {
   box-sizing: border-box;
   /* background-color: #f9f9f9; */
