@@ -428,18 +428,11 @@ z-index: 2;
 /* Values */
 
 .valuesparent {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  flex-wrap: wrap;
-  margin-top: 32px;
-}
-.valuesparent {
-  /* display: flex;           
+  display: flex;           
   align-items: flex-start; 
   gap: 16px;              
   /* border: 1px solid #ccc; */
-  height: 40px ; */
+  
 }
 
 .leftdivvalues {
