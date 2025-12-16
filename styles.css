@@ -31,13 +31,21 @@ a {
 li {
     list-style-type: none;
 }
+img {
+  width: 100%;
+}
+section {
+  padding: 0 32px;
+  /* clear: both;
+  margin-bottom: 60px; adjust as needed */
+}
 
 /* layout */
 .row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* border: #242424 solid 2px; */
+  border: #d7a253 solid 2px; 
 }
 
 .logo__img {
@@ -186,7 +194,7 @@ li {
     max-width: 1280px;
     margin: 0 auto;
     padding: 80px 0px;
-    /* border: 5px solid #242424; */
+    border: 1px solid #9719d6;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -250,24 +258,38 @@ li {
 
 /* Design and Development section */
 .leftdiv {
-  float: left;
   width: 50%;
-   border: 2px solid #480c0c;
+  /* border: 2px solid #480c0c; */
   display: flex;
   flex-direction: column;
-  max-width: 575px;
+  max-width: 475px;
   margin-right: 60px;
   padding: 10px 10px;
-
+  /* flex: 1;               /* equal width */
+  height: 100%;          /* equal height */
+  /* background-color: #f0f0f0; */
+  padding: 20px;
+  box-sizing: border-box;
+  /* border: 1px solid #ccc; */
 }
 .rightdiv {
-  float: left;
   width:50%;
-   /* border: 2px solid #242424; */
+  /* border: 2px solid #242424; */
+    /* flex: 1;               /* equal width */
+  height: 100%;          /* equal height */
+  /* background-color: #f0f0f0; */
+  padding: 20px;
+  box-sizing: border-box;
+  /* border: 1px solid #ccc; */
+  padding-left: 64px;
+}
+.leftdiv, .rightdiv {
+  float: none;       /* remove floats */
+  width: 48%;        /* or flex: 1; */
 }
 .section__title {
   line-height: 1.25;
-  font-size: 40px;
+  font-size: 48px;
   font-weight: 900;
   color: rgb(36, 62, 99);
   letter-spacing: 0.015em;
@@ -294,9 +316,39 @@ li {
 }
 .section__img--wrapper{
   z-index: 2;
-    width:100%;
+  width:100%;
   height: 100%;
+  margin-left: 5px;
 }
+.leftdivreactdev {
+  /* border: 2px solid #0f0c48; */
+  display: flex;
+  flex-direction: column;
+  max-width: 475px;
+  margin-right: 60px;
+  padding: 10px 10px;
+  box-sizing: border-box;
+}
+.rightdivreactdev {
+  /* border: 2px solid #a70bb0; */
+  padding: 32px 0;
+  box-sizing: border-box;
+  padding-left: 60px;
+}
+
+.feature__img--wrapper{
+ width: 50%;
+ position: relative;
+ display: flex;
+}
+.feature__img--wrapper,
+.rightdivreactdev {
+  width: 50%;
+}
+.feature__img {
+z-index: 2;
+}
+
 .section__img {
   width:100%;
   height: 100%;
@@ -339,15 +391,29 @@ li {
   align-items: flex-start; 
   gap: 16px;              
   /* border: 1px solid #ccc; */
+  
 }
 
-.child {
-max-width: 300px;
-/* border: 1px solid #ccc; */
-  font-size: 20px;
+/* .child {
+  max-width: 350px;
+  border: 1px solid #ccc;
+  font-size: 36px;
   font-weight: 600;
+  color: #cbd5e0;
+} */
+ .child {
+  max-width: 350px;
+  /* border: 1px solid #ccc; */
   color: #243e63;
+  /* remove font-size here so text inside can control its own size */
+}
 
+/* Style the number separately */
+.child:first-child {
+  font-size: 36px;
+  font-weight: 600;
+  color: #cbd5e0;
+  line-height: 1;          /* keeps number aligned at top */
 }
 .valuesparent {
   display: flex;           
@@ -356,26 +422,55 @@ max-width: 300px;
   /* border: 1px solid #ccc; */
   height: 40px ;
 }
-.childone {
-  width: 30px;
-  /* border: 1px solid #ccc; */
-  font-size: 20px;
-  font-weight: 600;
-  color: #243e63;
-  align-content: start;
+
+
+/* Values */
+
+.leftdivvalues {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;         
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 32px 64px 32px 0;
 }
-.childtwo {
-  /* border: 1px solid #ccc; */
-  font-size: 20px;
-  font-weight: 600;
-  color: #243e63;
-  align-content: start;
+.rightdivvalues {
+  /* width:50%;
+  height: 100%;         
+  box-sizing: border-box;
+  border: 1px solid #820c86;  */
+  width: 50%;
+  box-sizing: border-box;
+  border: 1px solid #820c86;
+  overflow: hidden;   /* prevents spill if image is larger */
 }
+
 .values__img--wrapper {
-  margin-top: 0px;
-  margin-left: 0px;
+  /* margin-top: 0px;
+  margin-left: 0px; */
   max-width: 50px;
+  background-color: #9ae6b4;
+      border-radius: 50%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    width: 36px;
+    height: 36px;
 }
+.valuesmain__img--wrapper {
+/* width: 100%; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.values__img {
+  display: block;
+  max-width: 100%;   /* keeps image inside parent width */
+  height: auto;      /* maintains aspect ratio */
+}
+
 
 .values__title {
   font-size: 20px;
@@ -393,24 +488,103 @@ max-width: 300px;
   line-height: 1.5;
   /* border: 1px solid #ccc; */
 }
-
-.valuesrow {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;*/
-  border: #242424 solid 2px;
-  width: 50%;  
-  float: left;
+.valuesleft__para {
+  font-size: 18px;
+  font-weight: 500;
+  color:#7c8ba1;
+  line-height: 1.625;
 }
+.values__btn {
+  padding: 10px 20px;
+  border-radius: 500px;
+  color: white;
+  background-color: #6415ff;
+  font-size: 16px;
+  font-weight: 700;
+  width: 145px;
+  margin-top: 48px;
+  height: calc(100% - 15px);
+  cursor: pointer;
+  border: none;
+}
+
+
 
 .valuesrowone {
   /* display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;*/
-  border: #730c0c solid 2px;
+  /* border: #730c0c solid 2px; */
   width: 50%;
-  float: left;  
+  /* float: left;   */
 }
-/*  */
+/* .valuesparent {
+  display: flex;
+} */
+
+
+.valuesparent {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+.valuesrow {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  flex: 1;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  max-width: 100%;
+}
+
+.childone {
+  flex: 0 0 40px;
+  left: 0px;
+}
+
+.values__img--wrapper img {
+  width: 32px;
+  height: 32px;
+}
+
+.childtwo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+.values__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #243e63;
+}
+
+.values__para {
+  font-size: 16px;
+  color: #718096;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.values__btn {
+  padding: 10px 20px;
+  border-radius: 500px;
+  background-color: #6415ff;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+  max-width: 100%;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
