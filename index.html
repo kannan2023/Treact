@@ -13,8 +13,8 @@
   />  
   <script src="https://kit.fontawesome.com/dd3d539c33.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles.css" />
+  <script src="index.js"></script>
 </head>
-
 <body>
   <section id="landing">
     <nav>
@@ -31,14 +31,14 @@
             <li><a class="nav__link" href="#">Contact Us</a></li>
             <li><a class="nav__link login" href="#">Login</a></li>
             <li><a class="btn" href="#">Sign Up</a></li>
-          </ul>          
+          </ul>  
+           <button class="menu__btn" onclick="open_menu()">
+            <i class="fas fa-bars"></i>
+          </button>        
         </div>
       </div>
-      <button class="menu__btn">
-        <i class="fas fa-bars"></i>
-      </button>
       <div class="menu__backdrop">
-        <button class="menu__btn close__btn">
+        <button class="menu__btn close__btn" onclick="close_menu()">
           <i class="fas fa-times"></i>
         </button>
         <div class="menus">

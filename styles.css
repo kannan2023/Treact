@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-/* ✅ sane global reset */
 * {
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
@@ -42,7 +41,6 @@ footer {
 }
 
 
-/* ✅ real container (not on every element) */
 .container {
     width: 100%;
     max-width: 1280px;
@@ -80,11 +78,11 @@ footer {
   gap: 28px;
 }
 
-/* ✅ underline that matches text width */
+
 .nav__link {
   position: relative;
-  display: inline-block;   /* NOT flex */
-  width: auto;             /* NOT 100% */
+  display: inline-block;  
+  width: auto;            
   padding: 0;
   font-size: 16px;
   font-weight: 600;
@@ -110,7 +108,9 @@ footer {
 }
 
 .login { margin-left: 22px; }
-
+.menu__btn, .menu__backdrop {
+  display: none;
+}
 .btn {
   background-color: #6415ff;
   color: white;
@@ -198,7 +198,8 @@ footer {
   width: 110%;
   max-width: 800px;
 }
-/* Features and services section */
+
+/*                 Features and services section */
 .feature__container {
     width: 100%;
     max-width: 1280px;
@@ -281,8 +282,7 @@ footer {
   max-width: 475px;
   margin-right: 60px;
   padding: 10px 10px;
-  /* flex: 1;               /* equal width */
-  height: 100%;          /* equal height */
+  height: 100%;
   /* background-color: #f0f0f0; */
   padding: 20px;
   box-sizing: border-box;
@@ -291,17 +291,15 @@ footer {
 .rightdiv {
   width:50%;
   /* border: 2px solid #242424; */
-    /* flex: 1;               /* equal width */
-  height: 100%;          /* equal height */
+    height: 100%;
   /* background-color: #f0f0f0; */
   padding: 20px;
   box-sizing: border-box;
-  /* border: 1px solid #ccc; */
-  padding-left: 64px;
+    padding-left: 64px;
 }
 .leftdiv, .rightdiv {
-  float: none;       /* remove floats */
-  width: 48%;        /* or flex: 1; */
+  float: none;      
+  width: 48%;       
 }
 .section__title {
   line-height: 1.25;
@@ -310,7 +308,6 @@ footer {
   color: rgb(36, 62, 99);
   letter-spacing: 0.015em;
   margin: 15px 0;
-  /* width: 70%; */
 }
 .section__para {
   font-size: 18px;
@@ -371,37 +368,6 @@ z-index: 2;
   z-index: 1;
 }
 
-/* * 1. Target the container you want the dots to be on. 
- * You must give it 'position: relative' so the absolute-positioned
- * pseudo-element can be placed relative to it.
- */
-.plan_card {
-  position: relative;
-  /* Add other styles for your main box here */
-}
-
-/* * 2. Create the dot pattern using a pseudo-element.
- */
-.plan_card::after {
-  content: '';
-  position: absolute;
-  
-  /* Size and positioning */
-  bottom: 0px; /* Start at the bottom edge */
-  right: 0px;  /* Start at the right edge */
-  width: 50px; /* Adjust the width of the pattern area */
-  height: 50px; /* Adjust the height of the pattern area */
-  
-  /* Apply the pattern from the SVG as a background image */
-  background-image: url('#dotGrid');
-  
-  /* You must define the SVG pattern in the HTML (see step 1) for this to work */
-  background-size: 10px 10px; /* Ensure the background size matches the pattern size */
-  background-repeat: repeat;
-  
-  /* Optional: Ensure the pattern stays behind the main content */
-  z-index: -1; 
-}
 
 .section__steps {
   /* border: 1px solid rgb(229, 0, 235); */
@@ -431,26 +397,17 @@ z-index: 2;
   
 }
 
-/* .child {
-  max-width: 350px;
-  border: 1px solid #ccc;
-  font-size: 36px;
-  font-weight: 600;
-  color: #cbd5e0;
-} */
  .child {
   max-width: 350px;
   /* border: 1px solid #ccc; */
   color: #243e63;
-  /* remove font-size here so text inside can control its own size */
 }
 
-/* Style the number separately */
 .child:first-child {
   font-size: 36px;
   font-weight: 600;
   color: #cbd5e0;
-  line-height: 1;          /* keeps number aligned at top */
+  line-height: 1;          
 }
 
 
@@ -473,18 +430,14 @@ z-index: 2;
   box-sizing: border-box;
   /* border: 1px solid #ccc; */
   padding: 32px 64px 32px 0;
-  float: none;           /* remove floats */  
+  float: none;          
 }
 .rightdivvalues {
-  /* width:50%;
-  height: 100%;         
-  box-sizing: border-box;
-  border: 1px solid #820c86;  */
   width: 50%;
   box-sizing: border-box;
   /* border: 1px solid #820c86; */
-  overflow: hidden;   /* prevents spill if image is larger */
-  float: none;           /* remove floats */  
+  overflow: hidden;  
+  float: none;          
 }
 
 .valuesmain__img--wrapper {
@@ -496,8 +449,8 @@ z-index: 2;
 }
 .values__img {
   display: block;
-  max-width: 100%;   /* keeps image inside parent width */
-  height: auto;      /* maintains aspect ratio */
+  max-width: 100%;  
+  height: auto;      
 }
 
 
@@ -509,14 +462,6 @@ z-index: 2;
   margin-left: 0px;  
 }
 
-.values__para {
-  /* margin-top: 0px;
-  max-width: 250px;
-  font-size: 16px;
-  color:#718096 ;
-  line-height: 1.5;
-  border: 1px solid #ccc; */
-}
 .valuesleft__para {
   font-size: 18px;
   font-weight: 500;
@@ -536,7 +481,7 @@ z-index: 2;
 .childone {
   /* border: 1px solid #820c86;   */
   display: flex;
-  gap: 8px; /* control the exact spacing */  
+  gap: 8px;   
   align-items: center;
 }
 
@@ -549,7 +494,7 @@ z-index: 2;
   flex-direction: column;
 }
 .values__img--wrapper {
-  margin: 0; /* remove default figure margin */
+  margin: 0; 
   max-width: 50px;
   background-color: #9ae6b4;
   border-radius: 50%;
@@ -561,7 +506,7 @@ z-index: 2;
 .values__img--wrapper img {
   width: 32px;
   height: 32px;
-  margin: 0; /* remove default figure margin */
+  margin: 0; 
 }
 
 .values__title {
@@ -577,20 +522,6 @@ z-index: 2;
   margin: 0;
   border: none;
 }
-/* .values__btn {
-  padding: 10px 20px;
-  border-radius: 500px;
-  color: white;
-  background-color: #6415ff;
-  font-size: 16px;
-  font-weight: 700;
-  width: 145px;
-  margin-top: 48px;
-  height: calc(100% - 15px);
-  cursor: pointer;
-  border: none;
-} */
-
 .values__btn {
   padding: 10px 20px;
   border-radius: 500px;
@@ -641,13 +572,13 @@ z-index: 2;
 }
 .plan {
   /* width: calc(100%/3); */
-  width:calc(33.333% - 20px); /* three per row */;
+  width:calc(33.333% - 20px);
   border: #e2e0df solid 2px; 
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   margin: 10px 5px;
-  flex: 1 1 30%; /* roughly one‑third */  
+  flex: 1 1 30%; 
   box-sizing: border-box;  
   align-items: center;
 }
@@ -658,7 +589,7 @@ z-index: 2;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative; /* needed for pseudo-element */    
+    position: relative; 
     border-radius: 10px;
 }
 .plan__top::before {
@@ -666,9 +597,9 @@ z-index: 2;
    position: absolute; 
    top: 0; 
    left: 0; 
-   height: 8px; /* thickness of the border */ 
+   height: 8px; 
    width: 100%; 
-   background: linear-gradient(to right, #10a9c1, #85cadb); /* purple to pink */
+   background: linear-gradient(to right, #10a9c1, #85cadb); 
     border-radius: 10px;
 }
 .plane__name {
@@ -755,7 +686,7 @@ z-index: 2;
    position: absolute; 
    top: 0; 
    left: 0; 
-   height: 8px; /* thickness of the border */ 
+   height: 8px; 
    width: 100%; 
   background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
     border-radius: 10px;
@@ -765,7 +696,7 @@ z-index: 2;
    position: absolute; 
    top: 0; 
    left: 0; 
-   height: 8px; /* thickness of the border */ 
+   height: 8px; 
    width: 100%; 
    background: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(76, 81, 191) 0%);
    border-radius: 10px;
@@ -782,14 +713,14 @@ z-index: 2;
   padding: 0px 0px;
 }
 .test__img--wrapper {
-  margin: 0; /* remove default figure margin */ 
+  margin: 0;
   padding: 0;
 }
 .test__img { 
   width: 100%; 
-  max-width: 100%; /* prevent overflow */ 
-  height: auto; /* keep aspect ratio */ 
-  display: block; /* remove inline spacing */ 
+  max-width: 100%; 
+  height: auto; 
+  display: block; 
 }
 
 .testdivright {
@@ -817,9 +748,6 @@ gap: 15px;
   object-fit: cover;   
 }
 .test__profile--para{
-  /* display: flex;
-  align-items: center;
-  gap: 12px; */
   padding: 0 20px;
 }
 .test__arrow--btns {
@@ -862,7 +790,7 @@ gap: 15px;
   padding: 5px;
 }
 .forward__btn img {
-  width: 24px;              /* size of arrow */
+  width: 24px;              
   height: 24px;
   color: #6415ff;
 }
@@ -881,15 +809,12 @@ gap: 15px;
   font-size: 32px;
   font-weight: 500;
   line-height: 1.5;
-  /* border: 5px solid #860101;
-  box-shadow: 2,2,2,2; */
   padding: 75px 0;
 }
 .getstarted__btn {
   padding: 15px 0px;
   border-radius: 500px;
   color: white;
-  /* background:linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%); */
   background-color : #f56565;
   font-size: 16px;
   font-weight: 500;
@@ -903,7 +828,6 @@ gap: 15px;
   padding: 15px 0px;
   border-radius: 500px;
   color: white;
-  /* background:linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%); */
   background-color: rgb(100, 21, 255);
   font-size: 16px;
   font-weight: 500;
@@ -1001,9 +925,8 @@ gap: 15px;
   justify-content: center;
 }
 .social__links {
-  display: flex; /* make children line up in a row */
+  display: flex; 
   padding: 0 40px;
-  /* filter: grayscale(1) invert(1); */
   gap: 10px
 }
 .social__link {
@@ -1104,11 +1027,6 @@ gap: 15px;
   align-self: flex-start;
   margin-left: 150px;
 }
-.feature__container .row {
-  /* text-align: center;
-  display: flex;
-  flex-direction: column; */
-}
 .features {
   display: flex;
   flex-direction: column;
@@ -1158,13 +1076,29 @@ border: 1px solid #7c8ba1;
 border-radius: 10px;
 top:45px;
 left: 30px;
-width:90vw;
+width:92vw;
 height: 500px;
 z-index: 4;
+display: none;
+justify-content: center;
 }
-.menus {
-  text-align: center;
+.menu--open .menu__backdrop {
+  animation: slide-left 0.6s ease-out forwards; 
+  display: flex;
 }
+
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(120%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+}
+
 .login {
   margin: 0px
 }
@@ -1175,6 +1109,8 @@ z-index: 4;
 .nav__links {
   display: none;
 }
-
+.menu__btn {
+  display: block;
+}
 
 }
