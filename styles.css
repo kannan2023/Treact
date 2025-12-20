@@ -1112,5 +1112,8 @@ justify-content: center;
 .menu__btn {
   display: block;
 }
+.footer__columns {
+  padding: 25px;
+}
 
 }
